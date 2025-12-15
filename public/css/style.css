@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #ffe1f0, #e0bbff);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background: #fff0f6;
+    padding: 35px 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+    width: 100%;
+    max-width: 500px;
+    border: 2px dashed #ffb6c1;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+/* Quote */
+.quote {
+    text-align: center;
+    font-size: 1rem;
+    color: #aa73b6;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Add Todo Form */
+.input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.input-section input[type="text"] {
+    flex: 1 1 auto;
+    padding: 12px;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.input-section input[type="text"]:focus {
+    border-color: #ff69b4;
+}
+
+/* File input styled as button */
+.file-label {
+    padding: 10px 15px;
+    background: #ffb6c1;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.file-label:hover {
+    background: #ff69b4;
+}
+
+.file-label input[type="file"] {
+    display: none; /* hide default file input */
+}
+
+/* Add Button */
+.add-btn {
+    padding: 12px 18px;
+    background: linear-gradient(to right, #ff69b4, #ff1493);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: linear-gradient(to right, #ff1493, #ff69b4);
+    transform: scale(1.05);
+}
+
+/* Todo List */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background: #fff;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#task-list li:hover {
+    transform: translateX(3px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #c87fa2;
+}
+
+.todo-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.edit-btn:hover {
+    color: #ff69b4;
+    transform: scale(1.2);
+}
+
+.delete-btn:hover {
+    color: #ff1493;
+    transform: scale(1.2);
+}
+
+.delete-form {
+    display: inline;
+}
+
+.empty-list {
+    text-align: center;
+    color: #aa73b6;
+    font-style: italic;
+}
+
+/* Responsive */
+@media(max-width: 480px) {
+    .input-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-section input[type="text"],
+    .add-btn,
+    .file-label {
+        width: 100%;
+    }
+}
+.status-select {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ffb6c1;
+    margin-top: 10px;
+    background-color: #fff0f6;
+    font-size: 14px;
+}
+
+.cancel-btn {
+    padding: 10px 15px;
+    background: #aaa;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #888;
+}
+
+.todo-image {
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
