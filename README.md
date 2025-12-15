@@ -32,5 +32,5 @@ No authentication is required.
 8. Open `http://127.0.0.1:8000` in browser
 
 ## Screenshots
-- Add Todo: ![Add](screenshots/image.png)
+- Add Todo: ![Add](Screenshots/image.png)
 
